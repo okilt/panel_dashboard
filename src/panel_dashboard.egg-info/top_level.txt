@@ -1,6 +1,0 @@
-__init__
-app
-components
-models
-state
-views
