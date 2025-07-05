@@ -1,4 +1,5 @@
 import panel as pn
+
 from src.views import fund_overview, portfolio_level
 
 # Use FastListTemplate for a modern look with a sidebar
@@ -15,13 +16,16 @@ PAGES = {
     "Portfolio Level": portfolio_level,
 }
 
+
 def get_content(page_name):
     page = PAGES[page_name]
     return page.view()
 
+
 def get_sidebar(page_name):
     page = PAGES[page_name]
     return page.controls()
+
 
 # The selector widget to switch between pages
 page_selector = pn.widgets.Select(
