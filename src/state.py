@@ -3,13 +3,12 @@ import param
 from src.models.factory import get_available_funds
 
 
-class GlobalState(param.Parameterized):
-    """
-    A state management class. It only holds the raw data and its type.
-    """
+class FundViewState(param.Parameterized):
+    """Holds the state for a single instance of a fund view."""
 
-    default_fund = next(iter(get_available_funds()))
-    selected_fund_id = param.String(default=default_fund, label="Selected Fund")
+    selected_fund_id = param.String(
+        default=next(iter(get_available_funds())), label="Selected Fund"
+    )
 
 
-state = GlobalState()
+global_fund_view_state = FundViewState()

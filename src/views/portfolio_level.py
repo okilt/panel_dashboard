@@ -1,13 +1,15 @@
 import panel as pn
 
+from src.state import global_fund_view_state
+
 
 # This view has no specific controls, so we return an empty pane
-def controls():
+def controls(state_obj=global_fund_view_state):
     return pn.pane.Markdown("No portfolio-level controls yet.")
 
 
 # The main content for the portfolio view
-def view():
+def view(state_obj=global_fund_view_state):
     return pn.Column(
         "## Portfolio Level Overview",
         "This page will contain aggregated metrics for all funds.",

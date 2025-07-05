@@ -1,6 +1,6 @@
 import panel as pn
 
-from src.views import fund_overview, portfolio_level
+from src.views import fund_overview, portfolio_level, split_view
 
 # Use FastListTemplate for a modern look with a sidebar
 template = pn.template.FastListTemplate(
@@ -14,6 +14,7 @@ template = pn.template.FastListTemplate(
 PAGES = {
     "Fund Overview": fund_overview,
     "Portfolio Level": portfolio_level,
+    "Split View": split_view,
 }
 
 
